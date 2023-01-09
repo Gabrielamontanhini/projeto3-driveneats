@@ -95,10 +95,10 @@ function continuar(){
 
 
 
-    let mensagem = `Olá, gostaria de fazer o pedido:
-    - Prato: ${prato.innerHTML}
-    - Bebida: ${bebida.innerHTML}
-    - Acompanhamento: ${acompanhamento.innerHTML}
+    let mensagem = `Olá, gostaria de fazer o pedido: \n
+    - Prato: ${prato.innerHTML} \n
+    - Bebida: ${bebida.innerHTML} \n
+    - Acompanhamento: ${acompanhamento.innerHTML} \n
     Total: R$ ${total} `
 
     const wpp = 'https://wa.me/5548988377358?text=' + encodeURIComponent(mensagem);
