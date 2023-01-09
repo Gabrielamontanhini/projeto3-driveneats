@@ -67,7 +67,43 @@ function selecionarExtra(essa){
 
 
 function continuar(){
-    alert("o botao foi clicado")
+    let prato = document.querySelector('.selecionado .food ');
+    let bebida = document.querySelector('.selecionado .drink');
+    let acompanhamento = document.querySelector('.selecionado .dessert');
+
+    let a = document.querySelector('.selecionado .price1');
+    let presoa = a.innerHTML;
+    let valor1 = presoa.replace('R$','');
+    let replace1 = valor1.replace(',','.')
+    let valorComida = Number(replace1);
+
+    let b = document.querySelector('.selecionado .price2');
+    let presob = b.innerHTML;
+    let valor2 = presob.replace('R$','')
+    let replace2 = valor2.replace(',','.')
+    let valorBebida = Number(replace2);
+    
+
+
+    let c = document.querySelector('.selecionado .price3');
+    let presoc = c.innerHTML;
+    let valor3 = presoc.replace('R$','')
+    let replace3 = valor3.replace(',','.');
+    let valorSobremesa = Number(replace3);
+    alert(valorSobremesa);
+    let total = valorComida+valorBebida+valorSobremesa;
+    
+
+
+
+    let mensagem = `Olá, gostaria de fazer o pedido:
+    - Prato: ${prato.innerHTML}
+    - Bebida: ${bebida.innerHTML}
+    - Acompanhamento: ${acompanhamento.innerHTML}
+    Total: R$ ${total} `
+
+    const wpp = 'https://wa.me/5548988377358?text=' + encodeURIComponent(mensagem);
+    window.open(wpp);
 }
 
 

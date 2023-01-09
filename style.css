@@ -156,3 +156,7 @@ background-color: #E5E5E5;
 .hide{
     display: none;
 }
+a{
+    text-decoration: none;
+    color: white;
+}
