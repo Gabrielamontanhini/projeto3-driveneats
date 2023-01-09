@@ -6,11 +6,16 @@ function selecionarComida(essa){
     }
     essa.classList.add('selecionado');
     console.log("comida foi");
-
+    const botao =  document.querySelector('.botao')
+let celecionados = document.querySelectorAll('.selecionado').length;
+if (celecionados === 3){
+    botao.removeAttribute('disabled');
+        botao.classList.add("finaliza");
+        botao.innerHTML = "Fechar pedido"
+}
 }
 
 let bebida; 
-
 function selecionarBebida(essa){
     let bebida = document.querySelector('.bebida .selecionado');
     if (bebida !== null){
@@ -18,7 +23,13 @@ function selecionarBebida(essa){
     }
     essa.classList.add('selecionado');
     console.log("bebida tbm")
-
+    const botao =  document.querySelector('.botao')
+let celecionados = document.querySelectorAll('.selecionado').length;
+if (celecionados === 3){
+    botao.removeAttribute('disabled');
+    botao.classList.add("finaliza");
+    botao.innerHTML = "Fechar pedido";
+}
 }
 
 let extra;
@@ -29,32 +40,34 @@ function selecionarExtra(essa){
     }
     essa.classList.add('selecionado');
     console.log("e o extra");
-
-
+    const botao =  document.querySelector('.botao')
+    let celecionados = document.querySelectorAll('.selecionado').length;
+    if (celecionados === 3){
+        botao.removeAttribute('disabled');
+        botao.classList.add("finaliza");
+        botao.innerHTML = "Fechar pedido"
+    }
 }
 
 
 
 
 
+/*function habilitar(){
+    alert("vamo ve")
+    const botao =  document.querySelector('.botao')
+    let comida = document.querySelector('.comida .selecionado');
+    let bebida = document.querySelector('.bebida .selecionado');
+    let extra = document.querySelector('.extra .selecionado');
+    
+    if ( comida !== undefined && bebida !== undefined && extra !== undefined){
+        botao.removeAttribute('disabled');
+    } 
+}*/
+
+
 function continuar(){
-    const botao =  document.getElementsByTagName('button')
-    let mensagem = 
-    
-    
-    
-    /*
+    alert("o botao foi clicado")
+}
 
-if ( comida !== undefined && bebida !== undefined && extra !== undefined ){
-            alert("verificação concluida")
-            
-botao.classList.add('.finaliza');
-            
-            
-            }
-            else{
-                alert('ainda nao');
-            }*/
-        }
 
-// botao.removeAttribute('disabled');
