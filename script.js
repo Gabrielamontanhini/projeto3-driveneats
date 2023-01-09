@@ -90,8 +90,8 @@ function continuar(){
     let valor3 = presoc.replace('R$','')
     let replace3 = valor3.replace(',','.');
     let valorSobremesa = Number(replace3);
-    let total = valorComida+valorBebida+valorSobremesa;
-    
+    let final = valorComida+valorBebida+valorSobremesa
+    let total = final.toFixed(2) 
 
 
 
